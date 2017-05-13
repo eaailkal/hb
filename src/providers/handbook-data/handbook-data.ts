@@ -1,18 +1,30 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import 'rxjs/add/operator/map';
+// import { Http } from '@angular/http';
+// import 'rxjs/add/operator/map';
 
-/*
-  Generated class for the HbDataProvider provider.
+// import AF modules from library to provide bindings to Firebase
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular 2 DI.
-*/
 @Injectable()
 export class HandbookDataProvider {
 
-  constructor(public http: Http) {
-    console.log('Hello HbDataProvider Provider');
+  items: FirebaseListObservable<any>;
+
+//   constructor(public http: Http) {
+  constructor(
+    // db: AngularFireDatabase
+    public db: AngularFireDatabase) {
   }
 
+  load() {}
+
+  getEvents(){
+    this.items = this.db.list('/events');
+    console.log('Events view');
+  }
+
+  getTimetable(){
+    this.items = this.db.list('/VCALENDAR/0/EVENT');
+    console.log('Timetable view');
+  }
 }

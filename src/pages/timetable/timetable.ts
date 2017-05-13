@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the TimetablePage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { HandbookDataProvider } from '../../providers/handbook-data/handbook-data';
+
 @IonicPage()
 @Component({
   selector: 'page-timetable',
@@ -14,15 +10,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TimetablePage {
 
-  posts: any = [];
-
   constructor(
     public navCtrl: NavController, 
-    public navParams: NavParams) {
+    public navParams: NavParams,
+    // public handbookData: HandbookDataProvider
+    private handbookData: HandbookDataProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad TimetablePage');
+    this.getTimetable();
+  }
+
+  getTimetable () {
+    this.handbookData.getTimetable();
+  }
+
+  addPost(post){
+    this.handbookData.addItem(post);
   }
 
 }
