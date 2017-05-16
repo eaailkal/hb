@@ -1,0 +1,122 @@
+{
+
+  "timetable": [{
+    "date": "2017-06-17",
+    "groups": [{
+      "time": "9:00 am",
+      "sessions": [{
+        "name": "Introduction to communication",
+        "location": "Room 2203",
+        "description": "HTML5, Javascript, and CSS.",
+        "teacherNames": ["Ulrik Bisgaard"],
+        "timeStart": "9:00 am",
+        "timeEnd": "10:00 am",
+        "topic": ["Communication"]
+      }]
+    }, {
+      "time": "10:00 am",
+      "sessions": [{
+        "name": "Migrating to Ionic2",
+        "location": "Room 2201",
+        "description": "Open web technologies.",
+        "teacherNames": ["Bror Arnfast"],
+        "timeStart": "10:00 am",
+        "timeEnd": "11:00 am",
+        "topic": ["Interaction"]
+      }]
+    }, {
+      "time": "11:00 am",
+      "sessions": [{
+        "name": "Ionic Workshop",
+        "location": "Room 2201",
+        "description": "Modern design concepts.",
+        "teacherNames": ["Michael Hvidtfeldt", "Helene Hammerholt Madsen"],
+        "timeStart": "11:00 am",
+        "timeEnd": "12:00 am",
+        "topic": ["Design"]
+      }]
+    }, {
+      "time": "12:00 pm",
+      "sessions": [{
+        "name": "Lunch",
+        "location": "Auditorium",
+        "description": "Come grab lunch",
+        "timeStart": "12:00 pm",
+        "timeEnd": "1:00 pm",
+        "topic": ["Lunch"]
+      }]
+    }]
+  }, 
+    {
+    "date": "2047-06-18",
+    "groups": [{
+      "time": "9:00 am",
+      "sessions": [{
+        "name": "Introduction to Appcamp.io",
+        "location": "Room 2203",
+        "description": "Mobile devices and browsers.",
+        "teacherNames": ["Ellie Elephant"],
+        "timeStart": "9:00 am",
+        "timeEnd": "10:00 am",
+        "topic": ["Communication"]
+      }]
+    }]},
+    {
+    "date": "2047-06-19",
+    "groups": [{
+      "time": "9:00 am",
+      "sessions": [{
+        "name": "Introduction to Appcamp.io",
+        "location": "Room 2203",
+        "description": "Mobile devices and browsers.",
+        "teacherNames": ["Ellie Elephant"],
+        "timeStart": "9:00 am",
+        "timeEnd": "10:00 am",
+        "topic": ["Communication"]
+      }]
+    }]}
+    ],
+
+  "teachers": [{
+    "name": "Ulrik Bisgaard",
+    "profilePic": "assets/img/teachers/bear.jpg",
+    "twitter": "ionicframework",
+    "about": "Burt is a Bear.",
+    "location": "Everywhere",
+    "email": "burt@example.com",
+    "phone": "+1-541-754-3010"
+  }, {
+    "name": "Bror Arnfast",
+    "profilePic": "assets/img/teachers/cheetah.jpg",
+    "twitter": "ionicframework",
+    "about": "Charlie is a Cheetah.",
+    "location": "Everywhere",
+    "email": "charlie@example.com",
+    "phone": "+1-541-754-3010"
+  }, {
+    "name": "Michael Hvidtfeldt",
+    "profilePic": "assets/img/teachers/duck.jpg",
+    "twitter": "ionicframework",
+    "about": "Donald is a Duck.",
+    "location": "Everywhere",
+    "email": "donald@example.com",
+    "phone": "+1-541-754-3010"
+  }],
+
+
+  "map": [{
+    "name": "Monona Terrace Convention Center",
+    "lat": 43.071584,
+    "lng": -89.380120,
+    "center": true
+  }, {
+    "name": "Ionic HQ",
+    "lat": 43.074395,
+    "lng": -89.381056
+  }, {
+    "name": "Afterparty - Brocach Irish Pub",
+    "lat": 43.07336,
+    "lng": -89.38335
+  }]
+
+}

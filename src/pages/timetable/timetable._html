@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar>
+    
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Timetable</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentFilter()">
+        <ion-icon ios="ios-options-outline" md="md-options"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+  
+  <ion-toolbar no-border-top>
+    <ion-searchbar color="primary"
+                   [(ngModel)]="queryText"
+                   (ionInput)="updateSchedule()"
+                   placeholder="Search">
+    </ion-searchbar>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content padding>
+<ion-list>
+  <ion-item *ngFor="let lecture of handbookData.items | async">
+    {{lecture.title}} - {{lecture.location}}
+  </ion-item>
+</ion-list>
+</ion-content>

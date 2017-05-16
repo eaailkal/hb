@@ -1,0 +1,15 @@
+
+{
+    "date": "2047-05-17",
+    "groups": [{
+      "time": "9:00 am",
+      "sessions": [{
+        "name": "Introduction to Appcamp.io",
+        "location": "Room 2203",
+        "description": "Mobile devices and browsers.",
+        "speakerNames": ["Ellie Elephant"],
+        "timeStart": "9:00 am",
+        "timeEnd": "10:00 am",
+        "topic": ["Communication"]
+      }]
+    }]}

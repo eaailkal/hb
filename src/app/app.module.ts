@@ -7,6 +7,7 @@ import {HttpModule} from '@angular/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { EventsPage } from '../pages/events/events';
+// import { EventDetailsPage } from '../pages/event-details/event-details';
 import { TimetablePage } from '../pages/timetable/timetable';
 import { AboutPage } from '../pages/about/about';
 import { ListPage } from '../pages/list/list';
@@ -16,6 +17,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 // Provider
 import { HandbookDataProvider } from '../providers/handbook-data/handbook-data';
+import { DataNewProvider } from '../providers/data-new/data-new';
+import { UserData } from '../providers/data-new/user-data';
 
 // Import AF module and AF database module
 // Docs https://github.com/angular/angularfire2/blob/master/docs/Auth-with-Ionic3-Angular4.md
@@ -38,6 +41,7 @@ export const firebaseConfig = {
     MyApp,
     HomePage,
     EventsPage,
+    // EventDetailsPage,
     TimetablePage,
     AboutPage,
     ListPage
@@ -56,6 +60,7 @@ export const firebaseConfig = {
     MyApp,
     HomePage,
     EventsPage,
+    // EventDetailsPage,
     TimetablePage,
     AboutPage,
     ListPage
@@ -64,7 +69,9 @@ export const firebaseConfig = {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    HandbookDataProvider
+    HandbookDataProvider,
+    DataNewProvider,
+    UserData
   ]
 })
 export class AppModule {}

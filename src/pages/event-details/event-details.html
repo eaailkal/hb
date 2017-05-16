@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{eventDetails.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <img src="assets/img/headers/{{eventDetails.image}}">
+    <h1 padding>{{eventDetails.title}}</h1>
+    <ion-card>
+        <ion-card-header>
+            Event Details
+        </ion-card-header>
+        <ion-card-content>
+            {{eventDetails.date}}
+            {{eventDetails.time}}
+            {{eventDetails.location}}
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>
