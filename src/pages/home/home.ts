@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-
 import { HandbookDataProvider } from '../../providers/handbook-data/handbook-data';
 
 @Component({
@@ -18,7 +17,7 @@ export class HomePage {
   }
   
   getFeed () {
-    this.handbookData.getNews();
+    this.handbookData.getRemoteData();
   }
 
 }

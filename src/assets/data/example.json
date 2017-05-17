@@ -1,7 +1,6 @@
 
-
 {
-"timetable": [{
+  "timetable": [{
     "date": "2047-05-17",
     "groups": [{
       "time": "9:00 am",
@@ -28,5 +27,27 @@
         "timeEnd": "10:00 am",
         "topic": ["Communication"]
       }]
-    }]}]
+    }]}],
+
+  "news": [{
+    "title": "Interns wanted at Wakeupdata!",
+    "description": "WakeupData is an online data integration hub. It is cloud based, so that our customers enjoy a  continuous, safe and secure service. We are looking for an intelligent, dedicated, responsive and  passionate individual who is ready to take on the challenges of some of the success management  processes in our fast-growing software company.",
+    "by": "Helpdesk",
+    "date": "2017-05-16"
+  },
+    {"title": "Ombygning af kantinen, Sønderhøj 30/Rebuilding of the canteen, Sønderhøj 30",
+    "description": "Projektet forløber i 2 faser:  Fase 1: Ombygning af eksisterende køkken, kantine og auditorium B.  Fase 2: Ny tilbygning i 2 etager, der indeholder personalekantine i stueetage og studiefaciliteter på 1. sal (med gangbro til eksisterende bibliotek).",
+    "by": "Morten Bo Jakobsen",
+    "date": "2017-05-11"
+  },
+    {"title": "Join the LinkedIn Social Selling Executive Playbook Workshop at EAlumne-network",
+    "description": "In this workshop we will cover the essentials of Personal Branding and Social Selling using LinkedIn. We will cover the do’s and don’ts when it comes to using the platform to generate leads or land your dream job.",
+    "by": "Mads Christian Mahler",
+    "date": "2017-05-09"
+  },
+    {"title": "IDdesign A/S søger medarbejdere til studiejob",
+    "description": "IDdesign A/S søger kundeservicemedarbejdere til hovedkontoret i Sabro. Læs mere om jobbet her: https://iddesign.youngcrm.com/jobportal/375",
+    "by": "Jane Baltzer",
+    "date": "2017-05-08"
+  }]
 }

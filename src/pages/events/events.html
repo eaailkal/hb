@@ -22,12 +22,16 @@
 <ion-content>
 
 <ion-list>
+
   <ion-item *ngFor="let event of handbookData.items | async" (click)="getEventDetails(event)" detail-push>
-    <ion-thumbnail item-left>
+    <p *ngIf="!event">
+    Loading...
+    </p>
+    <ion-thumbnail *ngIf="event" item-left>
       <img src="assets/img/thumbs/{{event.image}}">
     </ion-thumbnail>
-      <h2>{{event.title}}</h2>
-      <p>{{event.date}}</p>
+      <h2 *ngIf="event">{{event.title}}</h2>
+      <p *ngIf="event">{{event.date}}</p>
   </ion-item>
 </ion-list>
 

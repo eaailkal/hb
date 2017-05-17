@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 // import AF modules from library to provide bindings to Firebase
@@ -7,42 +8,47 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 
 @Injectable()
 export class HandbookDataProvider {
-  items: FirebaseListObservable<any>
+  news: Observable<any>;
+  items: FirebaseListObservable<any>;
   constructor(
     public http: Http,
     public db: AngularFireDatabase) {
   }
 
-  getTimetable(){
-    this.items = this.db.list('timetable');
-    console.log('Timetable view');
+  // load() {}
+
+  // code for news from json
+  getRemoteData(){
+    this.http.get('assets/data/example.json')
+      // In Javascript, mapping is a method available on arrays which allows you to “map” or “transform” each value in that array. We are not mapping an array, we are mapping an observable – this functionality is provided by the RxJS library (which is included in Ionic 2 & Angular 2), it is not in Javascript by default.
+
+      // .map(res => res.json())  
+
+      // returns only news
+      .map(res => res.json().news) 
+      
+      // res => res.json()
+      // is shorthand for
+      // (res) => { return res.json(); }
+
+      // we know get will return an observable, so we need to subscribe to an Observable
+      .subscribe(data => {
+      this.news = data;
+      console.log(this.news);
+    });
   }
 
-  getEvents(){
-    this.items = this.db.list('events');
-    console.log('Events view');
-  }
-
+  // old code for news from Firebase
   getNews(){
     this.items = this.db.list('news');
     console.log('News view');
   }
 
-  // load() {}
-
-  // getRemoteData(){
-  //   this.http.get('https://handbook-28b6f.firebaseio.com/')
-  //     .map(res => res.json())
-  //     .subscribe(data => {
-  //     console.log(data);
-  //   });
-  // }
-
-  // public getStories(): Observable<any> {
-  //   return this.http.get('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
-  //     .map(this.extractData)
-  //     .catch(this.handleError);
-  // }
+  // events are loaded from Firebase
+  getEvents(){
+    this.items = this.db.list('events');
+    console.log('Events view');
+  }
 
   presentFilter() {
     // more code
