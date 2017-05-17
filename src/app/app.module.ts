@@ -18,7 +18,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 // Provider
 import { HandbookDataProvider } from '../providers/handbook-data/handbook-data';
 import { DataNewProvider } from '../providers/data-new/data-new';
-import { UserData } from '../providers/data-new/user-data';
+// import { UserData } from '../providers/data-new/user-data';
 
 // Import AF module and AF database module
 // Docs https://github.com/angular/angularfire2/blob/master/docs/Auth-with-Ionic3-Angular4.md
@@ -70,8 +70,8 @@ export const firebaseConfig = {
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     HandbookDataProvider,
-    DataNewProvider,
-    UserData
+    DataNewProvider
+    // UserData
   ]
 })
 export class AppModule {}

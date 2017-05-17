@@ -3,7 +3,7 @@ import { IonicPage, List, NavController, NavParams } from 'ionic-angular';
 
 // import { HandbookDataProvider } from '../../providers/handbook-data/handbook-data';
 import { DataNewProvider } from '../../providers/data-new/data-new';
-import { UserData } from '../../providers/data-new/user-data';
+// import { UserData } from '../../providers/data-new/user-data';
 
 @IonicPage()
 @Component({
@@ -29,8 +29,8 @@ export class TimetablePage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    public dataNew: DataNewProvider,
-    public userData: UserData
+    public dataNew: DataNewProvider
+    // public userData: UserData
   ) {
     // public handbookData: HandbookDataProvider
     // private handbookData: HandbookDataProvider) {

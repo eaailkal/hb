@@ -1,10 +1,12 @@
 
+
 {
+"timetable": [{
     "date": "2047-05-17",
     "groups": [{
       "time": "9:00 am",
       "sessions": [{
-        "name": "Introduction to Appcamp.io",
+        "name": "Introduction to Angular",
         "location": "Room 2203",
         "description": "Mobile devices and browsers.",
         "speakerNames": ["Ellie Elephant"],
@@ -12,4 +14,19 @@
         "timeEnd": "10:00 am",
         "topic": ["Communication"]
       }]
-    }]}
+    }]},
+    {
+    "date": "2047-05-18",
+    "groups": [{
+      "time": "9:00 am",
+      "sessions": [{
+        "name": "Design principles",
+        "location": "Room 2203",
+        "description": "Mobile devices and browsers.",
+        "speakerNames": ["Ellie Elephant"],
+        "timeStart": "9:00 am",
+        "timeEnd": "10:00 am",
+        "topic": ["Communication"]
+      }]
+    }]}]
+}

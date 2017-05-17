@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { UserData } from './user-data';
+// import { UserData } from './user-data';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/of';
@@ -12,7 +12,7 @@ export class DataNewProvider {
 
   constructor(
     public http: Http,
-    public user: UserData
+    // public user: UserData
     ) {} 
   
 
@@ -67,7 +67,7 @@ export class DataNewProvider {
   //
   getTimeline(dayIndex: number, queryText = '', excludeTracks: any[] = [], segment = 'all') {
     return this.load().map((data: any) => {
-      let day = data.schedule[dayIndex];
+      let day = data.timetable[dayIndex];
       day.shownSessions = 0;
 
       queryText = queryText.toLowerCase().replace(/,|\.|-/g, ' ');
@@ -90,6 +90,7 @@ export class DataNewProvider {
       });
 
       return day;
+      //return data.timetable;
     });
   }
 
@@ -112,22 +113,27 @@ export class DataNewProvider {
     // if any of the sessions tracks are not in the
     // exclude tracks then this session passes the track test
     let matchesTracks = false;
-    session.tracks.forEach((trackName: string) => {
+    session.topic.forEach((trackName: string) => {
       if (excludeTracks.indexOf(trackName) === -1) {
         matchesTracks = true;
       }
     });
 
+
     // if the segement is 'favorites', but session is not a user favorite
     // then this session does not pass the segment test
-    let matchesSegment = false;
-    if (segment === 'favorites') {
-      if (this.user.hasFavorite(session.name)) {
-        matchesSegment = true;
-      }
-    } else {
-      matchesSegment = true;
-    }
+
+    // let matchesSegment = false;
+    // if (segment === 'favorites') {
+    //   if (this.user.hasFavorite(session.name)) {
+    //     matchesSegment = true;
+    //   }
+    // } else {
+    //   matchesSegment = true;
+    // }
+
+    let matchesSegment = true;
+
 
     // all tests must be true if it should not be hidden
     session.hide = !(matchesQueryText && matchesTracks && matchesSegment);

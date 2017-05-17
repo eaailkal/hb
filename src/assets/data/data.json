@@ -6,7 +6,7 @@
       "time": "9:00 am",
       "sessions": [{
         "name": "Introduction to communication",
-        "location": "Room 2203",
+        "location": "Room eaa-R104 S.30",
         "description": "HTML5, Javascript, and CSS.",
         "teacherNames": ["Ulrik Bisgaard"],
         "timeStart": "9:00 am",
@@ -16,8 +16,8 @@
     }, {
       "time": "10:00 am",
       "sessions": [{
-        "name": "Migrating to Ionic2",
-        "location": "Room 2201",
+        "name": "Open web technologies.",
+        "location": "Room eaa-R104 S.30",
         "description": "Open web technologies.",
         "teacherNames": ["Bror Arnfast"],
         "timeStart": "10:00 am",
@@ -27,8 +27,8 @@
     }, {
       "time": "11:00 am",
       "sessions": [{
-        "name": "Ionic Workshop",
-        "location": "Room 2201",
+        "name": "Modern design concepts.",
+        "location": "Room eaa-R104 1.27",
         "description": "Modern design concepts.",
         "teacherNames": ["Michael Hvidtfeldt", "Helene Hammerholt Madsen"],
         "timeStart": "11:00 am",
@@ -39,8 +39,8 @@
       "time": "12:00 pm",
       "sessions": [{
         "name": "Lunch",
-        "location": "Auditorium",
-        "description": "Come grab lunch",
+        "location": "Canteen",
+        "description": "Come and grab lunch",
         "timeStart": "12:00 pm",
         "timeEnd": "1:00 pm",
         "topic": ["Lunch"]
@@ -52,7 +52,7 @@
     "groups": [{
       "time": "9:00 am",
       "sessions": [{
-        "name": "Introduction to Appcamp.io",
+        "name": "Mobile devices and browsers.",
         "location": "Room 2203",
         "description": "Mobile devices and browsers.",
         "teacherNames": ["Ellie Elephant"],

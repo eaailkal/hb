@@ -7,32 +7,11 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 
 @Injectable()
 export class HandbookDataProvider {
-
-  items: FirebaseListObservable<any>;
-
-//   constructor(public http: Http) {
+  items: FirebaseListObservable<any>
   constructor(
-    // db: AngularFireDatabase
     public http: Http,
     public db: AngularFireDatabase) {
   }
-
-  // load() {}
-
-  // getRemoteData(){
-  //   this.http.get('https://handbook-28b6f.firebaseio.com/')
-  //     .map(res => res.json())
-  //     .subscribe(data => {
-  //     console.log(data);
-  //   });
-
-  // }
-
-  // public getStories(): Observable<any> {
-  //   return this.http.get('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
-  //     .map(this.extractData)
-  //     .catch(this.handleError);
-  // }
 
   getTimetable(){
     this.items = this.db.list('timetable');
@@ -43,6 +22,27 @@ export class HandbookDataProvider {
     this.items = this.db.list('events');
     console.log('Events view');
   }
+
+  getNews(){
+    this.items = this.db.list('news');
+    console.log('News view');
+  }
+
+  // load() {}
+
+  // getRemoteData(){
+  //   this.http.get('https://handbook-28b6f.firebaseio.com/')
+  //     .map(res => res.json())
+  //     .subscribe(data => {
+  //     console.log(data);
+  //   });
+  // }
+
+  // public getStories(): Observable<any> {
+  //   return this.http.get('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
+  //     .map(this.extractData)
+  //     .catch(this.handleError);
+  // }
 
   presentFilter() {
     // more code

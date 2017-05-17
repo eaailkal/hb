@@ -28,6 +28,13 @@
 
 <ion-content>
 
+<!-- Old code
+<ion-list>
+  <ion-item *ngFor="let lecture of handbookData.items | async">
+    {{lecture.title}} - {{lecture.location}}
+  </ion-item>
+</ion-list> -->
+
 <ion-list #scheduleList [hidden]="shownSessions === 0">
 
     <ion-item-group *ngFor="let group of groups" [hidden]="group.hide">
@@ -38,7 +45,7 @@
         </ion-label>
       </ion-item-divider>
 
-      <ion-item-sliding *ngFor="let session of group.sessions" #slidingItem [attr.track]="session.tracks[0] | lowercase" [hidden]="session.hide">
+      <ion-item-sliding *ngFor="let session of group.sessions" #slidingItem [attr.track]="session.topic[0] | lowercase" [hidden]="session.hide">
 
         <button ion-item (click)="goToSessionDetail(session)">
           <h3>{{session.name}}</h3>
