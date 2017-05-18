@@ -20,6 +20,9 @@ import { HandbookDataProvider } from '../providers/handbook-data/handbook-data';
 import { DataNewProvider } from '../providers/data-new/data-new';
 // import { UserData } from '../providers/data-new/user-data';
 
+// Storage
+import { IonicStorageModule } from '@ionic/storage';
+
 // Import AF module and AF database module
 // Docs https://github.com/angular/angularfire2/blob/master/docs/Auth-with-Ionic3-Angular4.md
 import { AngularFireModule } from 'angularfire2';
@@ -53,6 +56,8 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig), // imports firebase/app needed for everything
     AngularFireDatabaseModule, // imports firebase/database, only needed for database features
     // AngularFireAuthModule, // imports firebase/auth, only needed for auth features
+
+    IonicStorageModule.forRoot(), // Storage module
     HttpModule
   ],
   bootstrap: [IonicApp],

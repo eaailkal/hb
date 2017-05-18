@@ -4,18 +4,22 @@
 
 import {Injectable} from '@angular/core';
 import {Http, Jsonp} from '@angular/http';
-import {Storage, LocalStorage} from 'ionic-angular';
+import { Storage } from '@ionic/storage';
+// import {Storage, LocalStorage} from 'ionic-angular';
 
 @Injectable()
 export class ConfProvider {
     public speakers:any;
     public schedule:any;
-    storage = new Storage(LocalStorage);
+    // storage = new Storage(LocalStorage);
     url:string = 'http://lanyrd.com/2015/campjsnews/schedule/481ea3897063c7d5.v1.json?callback=JSONP_CALLBACK';
     offline_url:string = 'data/data.json';
     request:any;
     data:any;
-    constructor(public jsonp: Jsonp, public http:Http) {
+    constructor(
+        public jsonp: Jsonp, 
+        public http:Http,
+        private storage: Storage) {
       this.request =  this.jsonp.request(this.url);
     }
     
