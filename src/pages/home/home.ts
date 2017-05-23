@@ -13,11 +13,18 @@ export class HomePage {
     public handbookData: HandbookDataProvider) {}
 
   ionViewDidLoad() {
-    this.getFeed();
-  }
-  
-  getFeed () {
-    this.handbookData.getRemoteData();
+
+    // saving data to storage
+
+    // storage.ready().then(() => {
+    //   this.storage.set('name', 'Mr. Ionitron');
+    // });
+
+    // loading name from storage
+
+    // this.storage.get('name').then((name) => {
+    // console.log('Me: Hey, ' + name + '! You have a very nice name.');
+    // });
   }
 
 }

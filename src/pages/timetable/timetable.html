@@ -15,14 +15,6 @@
     </ion-buttons>
 
   </ion-navbar>
-  
-  <ion-toolbar no-border-top>
-    <ion-searchbar color="primary"
-                   [(ngModel)]="queryText"
-                   (ionInput)="updateSchedule()"
-                   placeholder="Search">
-    </ion-searchbar>
-  </ion-toolbar>
 
 </ion-header>
 
@@ -45,27 +37,16 @@
         </ion-label>
       </ion-item-divider>
 
-      <ion-item-sliding *ngFor="let session of group.sessions" #slidingItem [attr.track]="session.topic[0] | lowercase" [hidden]="session.hide">
+      <ion-item *ngFor="let session of group.sessions" #slidingItem [attr.track]="session.topic[0] | lowercase" [hidden]="session.hide">
 
         <button ion-item (click)="goToSessionDetail(session)">
           <h3>{{session.name}}</h3>
           <p>
-            {{session.timeStart}} &mdash;
-            {{session.timeEnd}}:
-            {{session.location}}
+            {{session.timeStart}} &mdash; {{session.timeEnd}}. {{session.location}}
           </p>
         </button>
 
-        <ion-item-options>
-          <button ion-button color="favorite" (click)="addFavorite(slidingItem, session)" *ngIf="segment === 'all'">
-            Favorite
-          </button>
-          <button ion-button color="danger" (click)="removeFavorite(slidingItem, session, 'Remove Favorite')" *ngIf="segment === 'favorites'">
-            Remove
-          </button>
-        </ion-item-options>
-
-      </ion-item-sliding>
+      </ion-item>
 
     </ion-item-group>
 

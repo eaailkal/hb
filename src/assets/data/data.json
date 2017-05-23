@@ -5,20 +5,20 @@
     "groups": [{
       "time": "9:00 am",
       "sessions": [{
-        "name": "Introduction to communication",
+        "name": "Introduction to design",
         "location": "Room eaa-R104 S.30",
-        "description": "HTML5, Javascript, and CSS.",
+        "description": "Pixels, pixels, pixels.",
         "teacherNames": ["Ulrik Bisgaard"],
         "timeStart": "9:00 am",
         "timeEnd": "10:00 am",
-        "topic": ["Communication"]
+        "topic": ["Design"]
       }]
     }, {
       "time": "10:00 am",
       "sessions": [{
-        "name": "Open web technologies.",
+        "name": "Databases",
         "location": "Room eaa-R104 S.30",
-        "description": "Open web technologies.",
+        "description": "MySQL syntax",
         "teacherNames": ["Bror Arnfast"],
         "timeStart": "10:00 am",
         "timeEnd": "11:00 am",
@@ -52,13 +52,13 @@
     "groups": [{
       "time": "9:00 am",
       "sessions": [{
-        "name": "Mobile devices and browsers.",
+        "name": "Vector vs. Pixel",
         "location": "Room 2203",
-        "description": "Mobile devices and browsers.",
-        "teacherNames": ["Ellie Elephant"],
+        "description": "Physical point in a raster image.",
+        "teacherNames": ["Michael Hvidtfeldt"],
         "timeStart": "9:00 am",
         "timeEnd": "10:00 am",
-        "topic": ["Communication"]
+        "topic": ["Design"]
       }]
     }]},
     {
@@ -66,13 +66,13 @@
     "groups": [{
       "time": "9:00 am",
       "sessions": [{
-        "name": "Introduction to Appcamp.io",
+        "name": "Introduction to Photoshop",
         "location": "Room 2203",
-        "description": "Mobile devices and browsers.",
-        "teacherNames": ["Ellie Elephant"],
+        "description": "Adobe Photoshop for beginners",
+        "teacherNames": ["Michael Hvidtfeldt"],
         "timeStart": "9:00 am",
         "timeEnd": "10:00 am",
-        "topic": ["Communication"]
+        "topic": ["Design"]
       }]
     }]}
     ],
@@ -80,43 +80,35 @@
   "teachers": [{
     "name": "Ulrik Bisgaard",
     "profilePic": "assets/img/teachers/bear.jpg",
-    "twitter": "ionicframework",
-    "about": "Burt is a Bear.",
+    "about": "Design teacher.",
     "location": "Everywhere",
-    "email": "burt@example.com",
+    "email": "ub@eaaa.dk",
     "phone": "+1-541-754-3010"
   }, {
     "name": "Bror Arnfast",
-    "profilePic": "assets/img/teachers/cheetah.jpg",
-    "twitter": "ionicframework",
-    "about": "Charlie is a Cheetah.",
+    "profilePic": "assets/img/teachers/ba.jpg",
+    "about": "Interaction teacher.",
     "location": "Everywhere",
-    "email": "charlie@example.com",
+    "email": "ba@eaaa.dk",
     "phone": "+1-541-754-3010"
   }, {
     "name": "Michael Hvidtfeldt",
-    "profilePic": "assets/img/teachers/duck.jpg",
-    "twitter": "ionicframework",
-    "about": "Donald is a Duck.",
+    "profilePic": "assets/img/teachers/mh.jpg",
+    "about": "Design teacher.",
     "location": "Everywhere",
-    "email": "donald@example.com",
+    "email": "mh@eaaa.dk",
     "phone": "+1-541-754-3010"
   }],
 
-
   "map": [{
-    "name": "Monona Terrace Convention Center",
+    "name": "Ringvej Syd",
     "lat": 43.071584,
-    "lng": -89.380120,
-    "center": true
+    "lng": -89.380120
   }, {
-    "name": "Ionic HQ",
+    "name": "Sønderhøj",
     "lat": 43.074395,
-    "lng": -89.381056
-  }, {
-    "name": "Afterparty - Brocach Irish Pub",
-    "lat": 43.07336,
-    "lng": -89.38335
+    "lng": -89.381056,
+    "center": true
   }]
 
 }

@@ -6,14 +6,15 @@
       <ion-icon name="menu"></ion-icon>
     </button>
 
-    <ion-segment>
+    <ion-title>Events & news</ion-title>
+    <!-- <ion-segment>
       <ion-segment-button value="all">
         All events
       </ion-segment-button>
       <ion-segment-button value="favorites">
         Favorites
       </ion-segment-button>
-    </ion-segment>
+    </ion-segment> -->
 
   </ion-navbar>
 
@@ -22,8 +23,10 @@
 <ion-content>
 
 <ion-list>
+  
+  <ion-list-header>Recent Events</ion-list-header>
 
-  <ion-item *ngFor="let event of handbookData.items | async" (click)="getEventDetails(event)" detail-push>
+  <ion-item-sliding *ngFor="let event of handbookData.events | async" (click)="getEventDetails(event)" detail-push>
     <p *ngIf="!event">
     Loading...
     </p>
@@ -32,7 +35,31 @@
     </ion-thumbnail>
       <h2 *ngIf="event">{{event.title}}</h2>
       <p *ngIf="event">{{event.date}}</p>
-  </ion-item>
+
+      <ion-item-options>
+        <button ion-button color="favorite" (click)="addFavorite(slidingItem, session)" *ngIf="segment === 'all'">
+          Favorite
+        </button>
+        <button ion-button color="danger" (click)="removeFavorite(slidingItem, session, 'Remove Favorite')" *ngIf="segment === 'favorites'">
+          Remove
+        </button>
+      </ion-item-options>
+
+  </ion-item-sliding>
+
 </ion-list>
+
+<ion-list>
+
+    <ion-list-header>Recent News</ion-list-header>
+
+    <ion-item *ngFor="let item of handbookData.news">
+      <h2>{{item.title}}</h2>
+      <p>{{item.description}}</p>
+      <p>by <strong>{{item.by}}</strong> on {{item.date}}</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+
+  </ion-list>
 
 </ion-content>

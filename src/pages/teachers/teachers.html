@@ -1,0 +1,108 @@
+<ion-header>
+  <ion-navbar>
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Teachers</ion-title>
+    
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="outer-content teachers-list">
+
+  <ion-list>
+    <ion-grid fixed>
+      <ion-row align-items-stretch>
+
+        <ion-col col-12 col-md-6 align-self-stretch align-self-center>
+
+          <ion-card class="teacher-card">
+            <ion-card-header>
+              <button ion-item detail-none (click)="goToSpeakerDetail(speaker)">
+                <ion-avatar item-start>
+                  <!-- <img [src]="speaker.profilePic" alt="Speaker profile pic"> -->
+                  <img src="assets/img/teachers/ba.jpg">
+                </ion-avatar>
+                Bror Arnfast
+              </button>
+            </ion-card-header>
+
+            <ion-card-content class="outer-content">
+              <ion-list>
+                <!--<button ion-item *ngFor="let session of speaker.sessions" (click)="goToSessionDetail(session)">
+                  <h3>List</h3>
+                </button>-->
+
+                <h3>Senior Lecturer</h3>
+                <p>Department/programme: Multimedia Design and Communication</p>
+              </ion-list>
+            </ion-card-content>
+
+            <ion-row no-padding>
+              <ion-col col-6 col-lg-auto text-center text-lg-left>
+                <button ion-button clear small color="primary" icon-left (click)="goToSpeakerTwitter(speaker)">
+                  <ion-icon name="call" item-left></ion-icon>
+                  Call
+                </button>
+              </ion-col>
+              <ion-col col-6 col-lg-auto text-center text-lg-right>
+                <button ion-button clear small color="primary" icon-left (click)="openContact(speaker)">
+                  <ion-icon name="mail" item-left></ion-icon>
+                  Send email
+                </button>
+              </ion-col>
+            </ion-row>
+
+          </ion-card>
+
+          <!-- new teacher -->
+
+          <ion-card class="teacher-card">
+            <ion-card-header>
+              <button ion-item detail-none (click)="goToSpeakerDetail(speaker)">
+                <ion-avatar item-start>
+                  <!-- <img [src]="speaker.profilePic" alt="Speaker profile pic"> -->
+                  <img src="assets/img/teachers/ub.jpg">
+                </ion-avatar>
+                Ulrik Bisgaard
+              </button>
+            </ion-card-header>
+
+            <ion-card-content class="outer-content">
+
+              <ion-list>
+                <!--<button ion-item *ngFor="let session of speaker.sessions" (click)="goToSessionDetail(session)">
+                  <h3>List</h3>
+                </button>-->
+
+                <h3>Lecturer</h3>
+                <p>Department/programme: Multimedia Design and Communication</p>
+              </ion-list>
+            </ion-card-content>
+
+            <ion-row no-padding>
+              <ion-col col-6 col-lg-auto text-center text-lg-left>
+                <button ion-button clear small color="primary" icon-left (click)="goToSpeakerTwitter(speaker)">
+                  <ion-icon name="call" item-left></ion-icon>
+                  Call
+                </button>
+              </ion-col>
+              <ion-col col-6 col-lg-auto text-center text-lg-right>
+                <button ion-button clear small color="primary" icon-left (click)="openContact(speaker)">
+                  <ion-icon name="mail" item-left></ion-icon>
+                  Send email
+                </button>
+              </ion-col>
+            </ion-row>
+
+          </ion-card>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+
+</ion-content>

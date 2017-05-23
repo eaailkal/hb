@@ -3,18 +3,73 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>News feed</ion-title>
+    <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  
-  <ion-card *ngFor="let item of handbookData.news">
-    <ion-card-content>
-      <ion-card-title>{{item.title}}</ion-card-title>
-      <p>{{item.description}}</p>
-      <p>by <strong>{{item.by}}</strong> on {{item.date}}</p>
-    </ion-card-content>
+<ion-content class="cards-bg">
+
+  <!-- Timetable -->
+
+  <ion-card class="cards-list-demo">
+
+  <ion-card-header>
+    Today's timetable
+  </ion-card-header>
+
+  <ion-list>
+    <button ion-item>
+      <ion-icon name="ios-clock-outline" md="ios-clock-outline" item-left></ion-icon>
+      <h2>9:00 Interaction</h2>
+      <p>Room eaa-R104 1.27</p>
+    </button>
+
+    <button ion-item>
+      <ion-icon ios="ios-clock-outline" md="ios-clock-outline" item-left></ion-icon>
+      <h2>10:30 Communication</h2>
+      <p>Room eaa-R104 S.30</p>
+    </button>
+
+    <button ion-item>
+      <ion-icon ios="ios-clock-outline" md="ios-clock-outline"  item-left></ion-icon>
+      <h2>13:00 Communication</h2>
+      <p>Room eaa-R104 S.30</p>
+    </button>
+
+  </ion-list>
+
+  </ion-card>
+
+  <!-- Assignments -->
+
+  <ion-card class="cards-list-demo">
+
+  <ion-card-header>
+    Assignments
+  </ion-card-header>
+
+  <ion-list>
+    <button ion-item>
+      <ion-icon md="ios-create-outline" ios="ios-create-outline" item-left></ion-icon>
+      <h2>Styletile exercise</h2>
+      <p>Date 18/06/2017</p>
+    </button>
+
+    <button ion-item>
+      <ion-icon md="ios-create-outline" ios="ios-create-outline" item-left></ion-icon>
+      <h2>Pulizzi, Joe: Epic content marketing, 2014, p. 131 – 137: Building your Editorial calender.</h2>
+      <p>Date 20/06/2017</p>
+    </button>
+
+    <button ion-item>
+      <ion-icon md="ios-create-outline" ios="ios-create-outline" item-left></ion-icon>
+      <h2>Frameworks exercise</h2>
+      <p>Date 26/06/2017</p>
+    </button>
+
+  </ion-list>
+
   </ion-card>
 
 </ion-content>
+

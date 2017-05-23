@@ -13,7 +13,7 @@ import { HandbookDataProvider } from '../../providers/handbook-data/handbook-dat
 export class EventsPage {
 
   // define the events variable that we referenced in our template
-  events: Array<Object> = [];
+  // events: Array<Object> = [];
   constructor(public navCtrl: NavController, 
   public navParams: NavParams,
   public handbookData: HandbookDataProvider) {
@@ -21,6 +21,8 @@ export class EventsPage {
 
   ionViewDidLoad() {
     this.getEventsList();
+    this.getFeed();
+
     //  this.handbookData.getEvents().then(theResult => { this.events = theResult; })
   }
   
@@ -31,6 +33,10 @@ export class EventsPage {
   getEventDetails(theEventData) {
     console.log(theEventData);
     this.navCtrl.push("EventDetailsPage", { handbookData: theEventData });
+  }
+  
+  getFeed () {
+    this.handbookData.getRemoteData();
   }
 
 }

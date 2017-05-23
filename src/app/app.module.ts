@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import {HttpModule} from '@angular/http';
+// import { HttpModule } from '@angular/http';
+import { HttpModule, JsonpModule } from '@angular/http';
 
 // Pages
 import { MyApp } from './app.component';
@@ -9,6 +10,8 @@ import { HomePage } from '../pages/home/home';
 import { EventsPage } from '../pages/events/events';
 // import { EventDetailsPage } from '../pages/event-details/event-details';
 import { TimetablePage } from '../pages/timetable/timetable';
+import { TeachersPage } from '../pages/teachers/teachers';
+import { SchedulePage } from '../pages/schedule/schedule';
 import { AboutPage } from '../pages/about/about';
 import { ListPage } from '../pages/list/list';
 
@@ -46,6 +49,8 @@ export const firebaseConfig = {
     EventsPage,
     // EventDetailsPage,
     TimetablePage,
+    TeachersPage, 
+    SchedulePage,
     AboutPage,
     ListPage
   ],
@@ -58,7 +63,8 @@ export const firebaseConfig = {
     // AngularFireAuthModule, // imports firebase/auth, only needed for auth features
 
     IonicStorageModule.forRoot(), // Storage module
-    HttpModule
+    HttpModule,
+    JsonpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -67,6 +73,8 @@ export const firebaseConfig = {
     EventsPage,
     // EventDetailsPage,
     TimetablePage,
+    TeachersPage,
+    SchedulePage,
     AboutPage,
     ListPage
   ],

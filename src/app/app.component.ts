@@ -8,6 +8,8 @@ import { HomePage } from '../pages/home/home';
 import { EventsPage } from '../pages/events/events';
 import { TimetablePage } from '../pages/timetable/timetable';
 import { ListPage } from '../pages/list/list';
+import { SchedulePage } from '../pages/schedule/schedule';
+import { TeachersPage } from '../pages/teachers/teachers';
 import { AboutPage } from '../pages/about/about';
 
 @Component({
@@ -27,8 +29,10 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage, icon: 'home' },
       { title: 'Timetable', component: TimetablePage, icon: 'calendar' },
-      { title: 'Events', component: EventsPage, icon: 'list' },
-      { title: 'Student handbook', component: ListPage, icon: 'heart' },
+      { title: 'Schedule', component: SchedulePage, icon: 'eye' },
+      { title: 'Teachers', component: TeachersPage, icon: 'people' },
+      { title: 'Events & news', component: EventsPage, icon: 'megaphone' },
+      { title: 'Student handbook', component: ListPage, icon: 'book' },
       { title: 'About', component: AboutPage, icon: 'information-circle' }
     ];
 
