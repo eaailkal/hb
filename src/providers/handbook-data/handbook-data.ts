@@ -14,8 +14,8 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 @Injectable()
 export class HandbookDataProvider {
   news: Observable<any>;
-  items: FirebaseListObservable<any>;
-  events: FirebaseListObservable<any>;
+  items: FirebaseListObservable<any[]>;
+  events: FirebaseListObservable<any[]>;
 
   //timetable
   public timetable: any;
@@ -30,10 +30,11 @@ export class HandbookDataProvider {
     public jsonp: Jsonp,
     public http: Http,
     private storage: Storage,
-    public afDB: AngularFireDatabase) {
+    afDB: AngularFireDatabase) {
       // this.request = db.list(this.url);
       // * in case if we are using jsonp
       this.request = this.jsonp.request(this.url);
+      // this.items = afDB.list('/news');
   }
 
   // load and process data code source 
@@ -171,7 +172,7 @@ export class HandbookDataProvider {
 
   // events are loaded from Firebase
   getEvents(){
-    this.events = this.afDB.list('events');
+    // this.events = this.afDB.object('events');
     console.log('Events view');
     console.log(this.events);
   }
