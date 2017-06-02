@@ -17,7 +17,35 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
+
+<ion-list>
+  <ion-item>
+    <ion-icon name="wifi" item-left></ion-icon>
+     Wireless network
+  </ion-item>
+  <ion-item>
+    <ion-icon name="pizza" item-left></ion-icon>
+     Canteen 
+  </ion-item>
+  <ion-item>
+    <ion-icon name="school" item-left></ion-icon>
+      Lost property
+  </ion-item>
+  <ion-item>
+    <ion-icon name="clipboard" item-left></ion-icon>
+      SU Office
+  </ion-item>
+  <ion-item>
+    <ion-icon name="school" item-left></ion-icon>
+      ServiceDesk
+  </ion-item>
+  <ion-item>
+    <ion-icon name="car" item-left></ion-icon>
+      Parking
+  </ion-item>
+</ion-list>
+
+  <!--<ion-list>
     <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
       <ion-icon [name]="item.icon" item-left></ion-icon>
       {{item.title}}
@@ -28,5 +56,5 @@
   </ion-list>
   <div *ngIf="selectedItem" padding>
     You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
+  </div>-->
 </ion-content>

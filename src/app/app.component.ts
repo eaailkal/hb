@@ -7,6 +7,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { EventsPage } from '../pages/events/events';
 import { TimetablePage } from '../pages/timetable/timetable';
+import { AssignmentsPage } from '../pages/assignments/assignments';
 import { ListPage } from '../pages/list/list';
 import { SchedulePage } from '../pages/schedule/schedule';
 import { TeachersPage } from '../pages/teachers/teachers';
@@ -29,7 +30,8 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage, icon: 'home' },
       { title: 'Timetable', component: TimetablePage, icon: 'calendar' },
-      { title: 'Schedule', component: SchedulePage, icon: 'eye' },
+      { title: 'Assignments', component: AssignmentsPage, icon: 'ios-create-outline' },
+     // { title: 'Schedule', component: SchedulePage, icon: 'eye' },
       { title: 'Teachers', component: TeachersPage, icon: 'people' },
       { title: 'Events & news', component: EventsPage, icon: 'megaphone' },
       { title: 'Student handbook', component: ListPage, icon: 'book' },

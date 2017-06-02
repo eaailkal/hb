@@ -10,6 +10,7 @@ import { HomePage } from '../pages/home/home';
 import { EventsPage } from '../pages/events/events';
 // import { EventDetailsPage } from '../pages/event-details/event-details';
 import { TimetablePage } from '../pages/timetable/timetable';
+import { AssignmentsPage } from '../pages/assignments/assignments';
 import { TeachersPage } from '../pages/teachers/teachers';
 import { SchedulePage } from '../pages/schedule/schedule';
 import { AboutPage } from '../pages/about/about';
@@ -49,6 +50,7 @@ export const firebaseConfig = {
     EventsPage,
     // EventDetailsPage,
     TimetablePage,
+    AssignmentsPage,
     TeachersPage, 
     SchedulePage,
     AboutPage,
@@ -73,6 +75,7 @@ export const firebaseConfig = {
     EventsPage,
     // EventDetailsPage,
     TimetablePage,
+    AssignmentsPage,
     TeachersPage,
     SchedulePage,
     AboutPage,
