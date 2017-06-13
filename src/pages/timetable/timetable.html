@@ -1,5 +1,4 @@
 <ion-header>
-
   <ion-navbar>
     
     <button ion-button menuToggle>
@@ -15,7 +14,6 @@
     </ion-buttons>
 
   </ion-navbar>
-
 </ion-header>
 
 <ion-content>
@@ -27,6 +25,9 @@
   </ion-item>
 </ion-list> -->
 
+<div [ngSwitch]="period">
+
+<div *ngSwitchCase="'today'"> 
 <ion-list #scheduleList [hidden]="shownSessions === 0">
 
     <ion-item-group *ngFor="let group of groups" [hidden]="group.hide">
@@ -55,16 +56,36 @@
   <ion-list-header [hidden]="shownSessions > 0">
       No Sessions Found
   </ion-list-header>
+</div>
+
+<div padding-top text-center *ngSwitchCase="'week'">
+  Week view to be shown here.
+</div>
+
+<div padding-top text-center *ngSwitchCase="'month'">
+  Month view to be shown here.
+</div>
+
+</div>
+
 
 </ion-content>
 
 <ion-footer no-border>
   <ion-toolbar>
-    <!-- <ion-tabs>
-      <ion-tab tabTitle="Schedule" tabIcon="calendar"></ion-tab>
-      <ion-tab tabTitle="Speakers" tabIcon="contacts"></ion-tab>
-      <ion-tab tabTitle="Map" tabIcon="map"></ion-tab>
-      <ion-tab tabTitle="About" tabIcon="information-circle"></ion-tab>
-    </ion-tabs> -->
+
+    <!-- Segment buttons with text -->
+    <ion-segment [(ngModel)]="period" color="primary">
+    <ion-segment-button value="today">
+      Today
+    </ion-segment-button>
+    <ion-segment-button value="week">
+      Week
+    </ion-segment-button>
+    <ion-segment-button value="month">
+      Month
+    </ion-segment-button>
+    </ion-segment>
+
   </ion-toolbar>
 </ion-footer>

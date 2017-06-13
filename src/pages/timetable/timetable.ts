@@ -26,12 +26,15 @@ export class TimetablePage {
   groups: any = [];
   confDate: string;
 
+  period: string = "today";
+
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
     public dataNew: DataNewProvider
     // public userData: UserData
   ) {
+    // this.period = "today";
     // public handbookData: HandbookDataProvider
     // private handbookData: HandbookDataProvider) {
   }
