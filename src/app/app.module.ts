@@ -15,6 +15,7 @@ import { TeachersPage } from '../pages/teachers/teachers';
 import { SchedulePage } from '../pages/schedule/schedule';
 import { AboutPage } from '../pages/about/about';
 import { ListPage } from '../pages/list/list';
+import { WalkThroughPage } from '../pages/walkthrough/walkthrough';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -54,6 +55,7 @@ export const firebaseConfig = {
     TeachersPage, 
     SchedulePage,
     AboutPage,
+    WalkThroughPage,
     ListPage
   ],
   imports: [
@@ -79,6 +81,7 @@ export const firebaseConfig = {
     TeachersPage,
     SchedulePage,
     AboutPage,
+    WalkThroughPage,
     ListPage
   ],
   providers: [

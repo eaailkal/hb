@@ -1,5 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
+// Storage
+import { Storage } from '@ionic/storage';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -9,9 +11,11 @@ import { EventsPage } from '../pages/events/events';
 import { TimetablePage } from '../pages/timetable/timetable';
 import { AssignmentsPage } from '../pages/assignments/assignments';
 import { ListPage } from '../pages/list/list';
-import { SchedulePage } from '../pages/schedule/schedule';
+// import { SchedulePage } from '../pages/schedule/schedule';
 import { TeachersPage } from '../pages/teachers/teachers';
 import { AboutPage } from '../pages/about/about';
+import { WalkThroughPage } from '../pages/walkthrough/walkthrough';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -23,8 +27,23 @@ export class MyApp {
 
   pages: Array<{title: string, component: any, icon: string}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
-    this.initializeApp();
+  constructor(
+    public platform: Platform, 
+    public statusBar: StatusBar, 
+    public storage: Storage,
+    public splashScreen: SplashScreen
+    ) {
+    // Check if the user has already seen the walkthrough
+    this.storage.get('hasSeenWalkThrough').then((hasSeenWalkThrough) => {
+        if (hasSeenWalkThrough) {
+          this.rootPage = HomePage;
+        } else {
+          this.rootPage = WalkThroughPage;
+        }
+        this.initializeApp();
+    })
+    
+    // this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [

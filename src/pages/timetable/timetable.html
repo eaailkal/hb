@@ -27,6 +27,10 @@
 
 <div [ngSwitch]="period">
 
+<div class="row img-center" *ngIf="!groups">
+		<img height="35" src="assets/img/ring.svg">
+</div>
+
 <div *ngSwitchCase="'today'"> 
 <ion-list #scheduleList [hidden]="shownSessions === 0">
 

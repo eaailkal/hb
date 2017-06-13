@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 // import { Http } from '@angular/http';
 // * in case if we are using jsonp
-import {Http, Jsonp} from '@angular/http';
+import { Http, Jsonp } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 

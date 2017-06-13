@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, Slides } from 'ionic-angular';
 import { HandbookDataProvider } from '../../providers/handbook-data/handbook-data';
 
 @Component({
@@ -7,6 +7,8 @@ import { HandbookDataProvider } from '../../providers/handbook-data/handbook-dat
   templateUrl: 'home.html'
 })
 export class HomePage {
+
+  @ViewChild('adSlider') slider: Slides;
 
   constructor(
     public navCtrl: NavController,
