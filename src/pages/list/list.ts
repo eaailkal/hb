@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, Platform } from 'ionic-angular';
+// Analytics
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 
 @Component({
   selector: 'page-list',
@@ -10,7 +12,16 @@ export class ListPage {
   // icons: string[];
   // items: Array<{title: string, note: string, icon: string}>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public platform: Platform,
+    private ga: GoogleAnalytics) {
+
+    this.platform.ready().then(() => {
+      this.ga.trackView("Student handbook");
+    });
+
   //   // If we navigated to this page, we will have an item available as a nav param
   //   this.selectedItem = navParams.get('item');
 

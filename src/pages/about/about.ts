@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 
 /**
  * Generated class for the AboutPage page.
@@ -14,7 +15,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AboutPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public platform: Platform,
+    private ga: GoogleAnalytics
+    ) {
+
+    this.platform.ready().then(() => {
+      this.ga.trackView("Student handbook");
+    });
+
   }
 
   ionViewDidLoad() {

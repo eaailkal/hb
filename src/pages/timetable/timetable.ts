@@ -1,9 +1,12 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, List, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, List, NavController, NavParams, Platform } from 'ionic-angular';
 
 // import { HandbookDataProvider } from '../../providers/handbook-data/handbook-data';
 import { DataNewProvider } from '../../providers/data-new/data-new';
 // import { UserData } from '../../providers/data-new/user-data';
+
+// Analytics
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 
 @IonicPage()
 @Component({
@@ -31,9 +34,16 @@ export class TimetablePage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    public dataNew: DataNewProvider
+    public dataNew: DataNewProvider,
+    public platform: Platform,
+    private ga: GoogleAnalytics
     // public userData: UserData
   ) {
+
+    this.platform.ready().then(() => {
+      this.ga.trackView("Timetable");
+    });
+
     // this.period = "today";
     // public handbookData: HandbookDataProvider
     // private handbookData: HandbookDataProvider) {

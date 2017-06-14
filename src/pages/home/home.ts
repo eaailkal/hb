@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, Slides, Platform } from 'ionic-angular';
 import { HandbookDataProvider } from '../../providers/handbook-data/handbook-data';
-
+// Analytics
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
 
 @Component({
