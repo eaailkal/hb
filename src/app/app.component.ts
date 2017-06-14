@@ -4,6 +4,8 @@ import { Nav, Platform } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+// Analytics
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 
 // Pages
 import { HomePage } from '../pages/home/home';
@@ -31,6 +33,7 @@ export class MyApp {
     public platform: Platform, 
     public statusBar: StatusBar, 
     public storage: Storage,
+    private ga: GoogleAnalytics,
     public splashScreen: SplashScreen
     ) {
     // Check if the user has already seen the walkthrough
@@ -65,6 +68,18 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+
+      // Google Analytics
+      return this.ga.startTrackerWithId("UA-101018990-1")
+        .then(() => {
+          console.log('Google analytics is ready now');
+          return this.ga.enableUncaughtExceptionReporting(true)
+        }).then((_success) => {
+          console.log("startTrackerWithId success")
+        }).catch((_error) => {
+          console.log("enableUncaughtExceptionReporting", _error)
+        })
+
     });
   }
 

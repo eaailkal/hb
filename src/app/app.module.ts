@@ -28,6 +28,9 @@ import { DataNewProvider } from '../providers/data-new/data-new';
 // Storage
 import { IonicStorageModule } from '@ionic/storage';
 
+// Analytics
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
+
 // Import AF module and AF database module
 // Docs https://github.com/angular/angularfire2/blob/master/docs/Auth-with-Ionic3-Angular4.md
 import { AngularFireModule } from 'angularfire2';
@@ -88,6 +91,7 @@ export const firebaseConfig = {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GoogleAnalytics,
     HandbookDataProvider,
     DataNewProvider
     // UserData

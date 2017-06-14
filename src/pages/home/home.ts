@@ -1,6 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, Slides } from 'ionic-angular';
+import { NavController, Slides, Platform } from 'ionic-angular';
 import { HandbookDataProvider } from '../../providers/handbook-data/handbook-data';
+
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 
 @Component({
   selector: 'page-home',
@@ -12,7 +14,22 @@ export class HomePage {
 
   constructor(
     public navCtrl: NavController,
-    public handbookData: HandbookDataProvider) {}
+    public handbookData: HandbookDataProvider,
+    public platform: Platform,
+    private ga: GoogleAnalytics) {
+
+    this.platform.ready().then(() => {
+      this.ga.trackView("Home Page");
+    });
+  
+  }
+
+  trackEvent() {
+    let active = this.slider.getActiveIndex();
+    this.platform.ready().then(() => {
+      this.ga.trackEvent("Slider", "Slider-Changed", "Label", active);
+    });
+  }
 
   ionViewDidLoad() {
 
