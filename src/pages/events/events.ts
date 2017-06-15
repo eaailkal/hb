@@ -16,7 +16,7 @@ import { GoogleAnalytics } from '@ionic-native/google-analytics';
 export class EventsPage {
 
   // define the events variable that we referenced in our template
-  // events: Array<Object> = [];
+  events: Array<Object> = [];
   constructor(
   public navCtrl: NavController, 
   public navParams: NavParams,

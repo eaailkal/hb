@@ -1,6 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, Slides, Platform } from 'ionic-angular';
 import { HandbookDataProvider } from '../../providers/handbook-data/handbook-data';
+// Storage
+import { Storage } from '@ionic/storage';
 // Analytics
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
 
@@ -10,12 +12,15 @@ import { GoogleAnalytics } from '@ionic-native/google-analytics';
 })
 export class HomePage {
 
+  userName: any;
+
   @ViewChild('adSlider') slider: Slides;
 
   constructor(
     public navCtrl: NavController,
     public handbookData: HandbookDataProvider,
     public platform: Platform,
+    public storage: Storage,
     private ga: GoogleAnalytics) {
 
     this.platform.ready().then(() => {
@@ -37,15 +42,16 @@ export class HomePage {
 
     // saving data to storage
 
-    // storage.ready().then(() => {
-    //   this.storage.set('name', 'Mr. Ionitron');
-    // });
+    this.storage.ready().then(() => {
+      this.storage.set('name', 'Emils');
+    });
 
     // loading name from storage
-
-    // this.storage.get('name').then((name) => {
-    // console.log('Me: Hey, ' + name + '! You have a very nice name.');
-    // });
+    this.storage.get('name').then((name) => {
+      console.log('Me: Hey, ' + name + '! You have a very nice name.');
+      this.userName = name;
+    });
+  
   }
 
 }

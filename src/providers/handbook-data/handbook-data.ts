@@ -34,7 +34,7 @@ export class HandbookDataProvider {
       // this.request = db.list(this.url);
       // * in case if we are using jsonp
       this.request = this.jsonp.request(this.url);
-      // this.items = afDB.list('/news');
+      this.events = afDB.list('/events');
   }
 
   // load and process data code source 
@@ -173,6 +173,7 @@ export class HandbookDataProvider {
   // events are loaded from Firebase
   getEvents(){
     // this.events = this.afDB.object('events');
+    // this.events = afDB.list('/events');
     console.log('Events view');
     console.log(this.events);
   }
