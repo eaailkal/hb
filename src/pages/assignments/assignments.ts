@@ -29,12 +29,12 @@ export class AssignmentsPage {
                     label: 'Assignments overview',
                     data: [3, 2],
                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(117, 179, 192, 0.2)'
+                        'rgba(242, 69, 56, 0.2)',
+                        'rgba(117, 179, 192, 1)'
                     ],
                     hoverBackgroundColor: [
-                        "#FF6384",
-                        "#75b3c0"
+                        "#f24538",
+                        "#5897af"   // #5897af
                     ]
                 }]
             }
