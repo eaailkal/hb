@@ -13,19 +13,20 @@
 
 <ion-content padding>
 
-  <ion-card>
-
-  <ion-card-content>
-    <h2>Aww yeah! Your action has a positive reaction. This week you completed 2 of of 5 assignments. How about a few more?</h2>
-    <!--<p>Let’s get started.</p>-->
-  </ion-card-content>
-
+  <ion-card class="cards-list-demo">
+      <ion-card-header>
+        Progress
+      </ion-card-header>
+      <ion-card-content>
+        <p>Aww yeah! Your action has a positive reaction. This week you completed 2 of of 5 assignments.</p>
+        <canvas #doughnutCanvas></canvas>
+      </ion-card-content>
   </ion-card>
 
   <ion-card class="cards-list-demo">
 
   <ion-card-header>
-    Assignments overview
+    How about a few more?
   </ion-card-header>
 
   <ion-list>
