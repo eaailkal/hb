@@ -5,7 +5,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
 
-    <ion-title>Timetable</ion-title>
+    <ion-title>Timetable</ion-title> <!-- {{today | date:'d MMMM'}} -->
 
     <ion-buttons end>
       <button ion-button icon-only (click)="presentFilter()">
@@ -63,12 +63,114 @@
   </ion-list-header>
 </div>
 
-<div padding-top text-center *ngSwitchCase="'week'">
-  Week view to be shown here.
+<div *ngSwitchCase="'week'">
+
+  <ion-item-divider text-center sticky>
+    <ion-label>
+      <h2>Week {{today | week}}</h2>
+    </ion-label>
+  </ion-item-divider>
+
+  <ion-card class="cards-list-demo">
+
+  <ion-card-header>
+    Monday
+  </ion-card-header>
+
+  <ion-list>
+    <button ion-item>
+      <ion-icon name="ios-clock-outline" md="ios-clock-outline" item-left></ion-icon>
+      <h2>9:00 Interaction</h2>
+      <p>Room eaa-R104 1.27</p>
+    </button>
+
+    <button ion-item>
+      <ion-icon ios="ios-clock-outline" md="ios-clock-outline" item-left></ion-icon>
+      <h2>10:30 Communication</h2>
+      <p>Room eaa-R104 S.30</p>
+    </button>
+
+    <button ion-item>
+      <ion-icon ios="ios-clock-outline" md="ios-clock-outline"  item-left></ion-icon>
+      <h2>13:00 Communication</h2>
+      <p>Room eaa-R104 S.30</p>
+    </button>
+  </ion-list>
+
+  </ion-card>
+
+  <ion-card class="cards-list-demo">
+
+  <ion-card-header>
+    Tuesday
+  </ion-card-header>
+
+  <ion-list>
+    <button ion-item>
+      <ion-icon name="ios-clock-outline" md="ios-clock-outline" item-left></ion-icon>
+      <h2>9:00 Interaction</h2>
+      <p>Room eaa-R104 1.27</p>
+    </button>
+
+    <button ion-item>
+      <ion-icon ios="ios-clock-outline" md="ios-clock-outline" item-left></ion-icon>
+      <h2>10:30 Interaction</h2>
+      <p>Room eaa-R104 S.30</p>
+    </button>
+
+    <button ion-item>
+      <ion-icon ios="ios-clock-outline" md="ios-clock-outline"  item-left></ion-icon>
+      <h2>13:00 Interaction</h2>
+      <p>Room eaa-R104 S.30</p>
+    </button>
+  </ion-list>
+
+  </ion-card>
+
+  <ion-card class="cards-list-demo">
+
+  <ion-card-header>
+    Wednesday
+  </ion-card-header>
+
+  <ion-list>
+    <button ion-item>
+      <ion-icon name="ios-clock-outline" md="ios-clock-outline" item-left></ion-icon>
+      <h2>9:00 Communication</h2>
+      <p>Room eaa-R104 1.27</p>
+    </button>
+
+    <button ion-item>
+      <ion-icon ios="ios-clock-outline" md="ios-clock-outline" item-left></ion-icon>
+      <h2>10:30 Communication</h2>
+      <p>Room eaa-R104 S.30</p>
+    </button>
+
+    <button ion-item>
+      <ion-icon ios="ios-clock-outline" md="ios-clock-outline"  item-left></ion-icon>
+      <h2>13:00 Communication</h2>
+      <p>Room eaa-R104 S.30</p>
+    </button>
+  </ion-list>
+
+  </ion-card>
+
 </div>
 
-<div padding-top text-center *ngSwitchCase="'month'">
-  Month view to be shown here.
+<div text-center *ngSwitchCase="'month'">
+  <ion-item-divider text-center sticky>
+    <ion-label>
+      <h2> {{today | date:'MMMM'}}</h2>
+    </ion-label>
+  </ion-item-divider>
+  
+  <ion-card>
+    <ion-card-content>
+    <h2></h2>
+    <p>Month view to be shown here.</p>
+    </ion-card-content>
+  </ion-card>
+
 </div>
 
 </div>

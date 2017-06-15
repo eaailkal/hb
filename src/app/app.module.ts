@@ -20,6 +20,9 @@ import { WalkThroughPage } from '../pages/walkthrough/walkthrough';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+// Week number pipe
+import { WeekPipe } from '../pipes/week-pipe';
+
 // Provider
 import { HandbookDataProvider } from '../providers/handbook-data/handbook-data';
 import { DataNewProvider } from '../providers/data-new/data-new';
@@ -59,7 +62,8 @@ export const firebaseConfig = {
     SchedulePage,
     AboutPage,
     WalkThroughPage,
-    ListPage
+    ListPage,
+    WeekPipe      // including the pipe in declarations
   ],
   imports: [
     BrowserModule,

@@ -73,6 +73,7 @@ export class MyApp {
       return this.ga.startTrackerWithId("UA-101018990-1")
         .then(() => {
           console.log('Google analytics is ready now');
+          this.ga.setAppVersion('0.0.2');
           return this.ga.enableUncaughtExceptionReporting(true)
         }).then((_success) => {
           console.log("startTrackerWithId success")

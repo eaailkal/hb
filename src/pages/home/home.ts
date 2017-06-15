@@ -24,6 +24,8 @@ export class HomePage {
   
   }
 
+  today: number = Date.now();
+
   trackEvent() {
     let active = this.slider.getActiveIndex();
     this.platform.ready().then(() => {

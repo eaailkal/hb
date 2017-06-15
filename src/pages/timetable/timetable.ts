@@ -49,6 +49,8 @@ export class TimetablePage {
     // private handbookData: HandbookDataProvider) {
   }
 
+  today: number = Date.now();
+
   ionViewDidLoad() {
     // this.app.setTitle('Schedule');
     this.updateSchedule();

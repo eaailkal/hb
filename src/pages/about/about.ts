@@ -23,7 +23,7 @@ export class AboutPage {
     ) {
 
     this.platform.ready().then(() => {
-      this.ga.trackView("Student handbook");
+      this.ga.trackView("About");
     });
 
   }
